@@ -142,7 +142,7 @@ defmodule Rumbl.Multimedia do
     Video.changeset(video, attrs)
   end
 
-  def craete_category!(name) do
+  def create_category!(name) do
     Repo.insert!(%Category{name: name}, on_conflict: :nothing)
   end
 
