@@ -33,5 +33,16 @@ defmodule Rumbl.MultimediaTest do
       %Video{id: id2} = video_fixture(owner)
       assert [%Videp{id: ^id1}, %Video{id: ^id2}] = Multimedia.list_videos()
     end
+
+    test "get_video!/1 returns the video with given id" do
+      owner = user_fixture()
+
+      assert {:ok, %Video{} = video} =
+        Multimedia.create_video(owner, @valid_attrs)
+
+      assert video.description == "desc"
+      assert video.title == "title"
+      assert video.url == "http://local"
+    end
   end
 end
