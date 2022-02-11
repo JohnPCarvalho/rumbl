@@ -9,7 +9,7 @@ defmodule RumblWeb.Auth do
     user_id = get_session(conn, :user_id)
 
     cond do
-      conn.assigns[:current_users] ->
+      conn.assigns[:current_user] ->
         conn
 
       user = user_id && Rumbl.Accounts.get_user(user_id) ->
