@@ -80,7 +80,7 @@ defmodule RumblWeb.VideoControllerTest do
     end
   end
 
-  test "authorizes actions agains access by other users", %{conn: conn} do
+  test "authorizes actions against access by other users", %{conn: conn} do
     owner = user_fixture(username: "owner")
     video = video_fixture(owner, @create_attrs)
     non_owner = user_fixture(username: "sneaky")
