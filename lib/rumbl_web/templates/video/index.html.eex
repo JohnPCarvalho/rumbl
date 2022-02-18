@@ -17,7 +17,7 @@
             <td>
                 <%= link "Delete", to: Routes.video_path(@conn, :delete, video),
                     method: :delete,
-                    data: [confirm: "Are you sure?"] %>
+                    data: [confirm: "Are you sure? This will be deleted forever."] %>
             </td>
             <td>
                 <%= link "Watch", to: Routes.watch_path(@conn, :show, "#{video.id}-#{video.slug}"),
