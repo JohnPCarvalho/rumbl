@@ -1,8 +1,8 @@
-import Player from "./Player"
+import Player from "./player"
 
 let Video = {
   
-  init(sockect, element){ if(!element) { return } 
+  init(socket, element){ if(!element) { return } 
     let playerId = element.getAttribute("data-player-id")
     let videoId = element.getAttribute("data-id")
     socket.connect()
