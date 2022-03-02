@@ -7,7 +7,7 @@ let Video = {
     let videoId = element.getAttribute("data-id")
     socket.connect()
     Player.init(element.id, playerId, () => {
-      this.onReady(videoId, sockect)
+      this.onReady(videoId, socket)
     })
   },
   
