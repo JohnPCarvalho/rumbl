@@ -13,7 +13,9 @@
   the last one will be called to start off where it left last time.
 
 ## How sockets work? How to I access or manipulate the information of a socket?
-
+  
+  A socket is a struct (a map in Elixir) that stores its state via the Phoenix.Socket struct
+  It is a responsibility of the socket to tie channels and transports as well.
   
 
 ## What is the use of a Phoenix Channel?
